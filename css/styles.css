@@ -915,7 +915,6 @@ footer .text {
 }
 
 .form-input {
-  margin: 0;
   padding: 11px 12px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -929,6 +928,18 @@ footer .text {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.icon-modal {
+  position: absolute;
+
+  top: 50%;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  color: var(--title-text-color);
 }
 
 .btn-close {
@@ -954,15 +965,4 @@ footer .text {
 
   width: 11px;
   height: 11px;
-}
-
-.icon-modal {
-  position: absolute;
-
-  top: 50%;
-  left: 30px;
-  transform: translate(-50%);
-
-  width: 18px;
-  height: 18px;
 }
