@@ -407,10 +407,11 @@
         <button data-modal-close type="button" class="btn-close">
           <svg class="btn-modal-close"><use href="./images/icons.svg#icon-close"></use></svg>
         </button>
-        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
           <div class="form-field">
             <label for="name" class="form-label">Имя</label>
+
             <input type="txt" name="name" id="name" class="form-input" />
 
             <svg class="icon-modal"><use href="./images/icons.svg#icon-person"></use></svg>
@@ -435,10 +436,15 @@
               class="form-textarea"
             ></textarea>
           </div>
-          <p class="agreement">
-            Соглашаюсь с рассылкой и принимаю
-            <span class="agreement-two"> <a href="">Условия договора</a> </span>
-          </p>
+          <label class="check-field">
+            <input type="checkbox" class="checkbox" name="checkbox" />
+            <span class="checkbox-label"></span>
+            <span class="agreement">
+              Соглашаюсь с рассылкой и принимаю
+              <span> <a href="" class="agreement-two">Условия договора</a> </span>
+            </span>
+          </label>
+
           <button type="submit" class="btn-send">Отправить</button>
         </form>
       </div>

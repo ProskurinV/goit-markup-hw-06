@@ -667,7 +667,8 @@ footer .text {
   border-radius: 4px;
 
   background-color: rgba(47, 48, 58, 1);
-  /* color: rgba(255, 255, 255, 0.6); */
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .btn-send {
@@ -678,6 +679,7 @@ footer .text {
   line-height: 1.87;
   letter-spacing: 0.06em;
   align-items: center;
+
   font-size: 16px;
   font-weight: 700;
   border-radius: 4px;
@@ -690,7 +692,7 @@ footer .text {
   width: 200px;
   height: 50px;
 
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-send {
@@ -903,10 +905,6 @@ footer .text {
 }
 
 .modal-title {
-  height: 23px;
-  width: 448px;
-
-  margin-top: 40px;
   margin-bottom: 12px;
   margin-left: auto;
   margin-right: auto;
@@ -919,10 +917,16 @@ footer .text {
 }
 
 .form {
-  width: 448px;
+  /* width: 448px; */
 
   margin-left: auto;
   margin-right: auto;
+
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .form-field:not(:last-child) {
@@ -934,13 +938,13 @@ footer .text {
 
   display: flex;
   flex-direction: column;
-
-  border-color: none;
 }
 
 .form-label {
   display: block;
   margin-bottom: 4px;
+
+  color: var(--text-color);
 }
 
 .form-input {
@@ -958,6 +962,17 @@ footer .text {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-textarea:focus-within {
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .icon-modal {
@@ -972,17 +987,13 @@ footer .text {
   fill: var(--title-text-color);
 }
 
-/* .form-input:focus ~ .icon-modal {
+.form-field:focus-within .icon-modal {
   fill: var(--accent-color);
 }
 
-.form-input:focus,
-.form-textarea:focus {
-  border: 1px solid #2196f3;
-} */
-
-.form-field:focus-within .icon-modal {
-  fill: var(--accent-color);
+.form-input:focus-within {
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .btn-send {
@@ -1002,20 +1013,59 @@ footer .text {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .btn-send:hover,
 .btn-send:focus {
   background-color: var(--primary-btn-hover-color);
 }
 
 .agreement {
+  display: inline-block;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--text-color);
+
+  margin-bottom: 30px;
 }
 
 .agreement-two {
   display: inline-block;
   color: var(--accent-color);
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label {
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8.38px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 4px;
+}
+
+.checkbox:checked + .checkbox-label {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/icon\ check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
