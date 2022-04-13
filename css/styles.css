@@ -890,6 +890,8 @@ footer .text {
   border-radius: 50%;
   border: 1px solid #0000001a;
   cursor: pointer;
+
+  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal-close {
@@ -897,6 +899,8 @@ footer .text {
 
   width: 11px;
   height: 11px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-close:hover .btn-modal-close,
@@ -953,6 +957,8 @@ footer .text {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea {
@@ -968,6 +974,8 @@ footer .text {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea:focus-within {
@@ -985,6 +993,8 @@ footer .text {
   height: 18px;
 
   fill: var(--title-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field:focus-within .icon-modal {
@@ -996,7 +1006,7 @@ footer .text {
   outline: none;
 }
 
-.btn-send {
+.btn-send-modal {
   color: var(--bg-color);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -1014,8 +1024,8 @@ footer .text {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-send:hover,
-.btn-send:focus {
+.btn-send-modal:hover,
+.btn-send-modal:focus {
   background-color: var(--primary-btn-hover-color);
 }
 
@@ -1060,6 +1070,10 @@ footer .text {
 
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .checkbox-label {
