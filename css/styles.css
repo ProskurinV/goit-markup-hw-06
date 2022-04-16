@@ -999,6 +999,10 @@ footer .text {
   outline: none;
 }
 
+.form-textarea:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+}
+
 .icon-modal {
   position: absolute;
 
@@ -1023,6 +1027,10 @@ footer .text {
 .form-input:focus-within {
   border: 1px solid var(--accent-color);
   outline: none;
+}
+
+.form-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
 }
 
 .btn-send-modal {
